@@ -1,4 +1,9 @@
-export default function DateElement({date}: {date: string}) {
+
+type dateProps = {
+    date?: string;
+} & React.HTMLAttributes<HTMLDivElement>;
+
+export default function DateElement({date, ...rest}: dateProps) {
 
     return(
         <div className="flex items-center w-[44px] h-[44px] translucent-white20">
